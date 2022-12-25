@@ -1,3 +1,3 @@
 git add --all & 
 git commit -m "latest commit" &
-git push -u origin main
+git push -u origin master
