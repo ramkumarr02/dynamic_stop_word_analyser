@@ -111,6 +111,11 @@ def get_dynamic_stop_words_list(freqdf, corpus_perc_threshold, stop_words_skip_l
     non_stop_words_list = list(freqdf[freqdf['corpus_%'] < corpus_perc_threshold]['word'])
     non_stop_words_list = list(set(non_stop_words_list + stop_words_skip_list))
     
+    print('-----------------------------')
+    print(f'non_stop_words_list has {len(non_stop_words_list)} words e.g.({non_stop_words_list[1:5]})')      
+    print(f'stop_words_list has {len(stop_words_list)} words e.g.({stop_words_list[1:5]})')
+    print('-----------------------------')
+
     return(stop_words_list, non_stop_words_list)
 #...............................................................................................    
 
