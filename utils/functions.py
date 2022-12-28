@@ -52,8 +52,8 @@ def plot_reverse_elbow_curve(small_freq_df):
     ax.plot(x, y, **{'color': 'lightsteelblue', 'marker': 'o'})
     plt.xticks(np.arange(min(x), 100, 2))
     plt.yticks(np.arange(min(y), 100, 10))
-    plt.xlabel ('distinct_word_%')
-    plt.ylabel ('corpus_%')
+    plt.xlabel ('distinct_word_%', fontsize = 15)
+    plt.ylabel ('corpus_%', fontsize = 15)
     return(plt)
 #...............................................................................................    
 
@@ -118,20 +118,7 @@ def get_dynamic_stop_words_list(freqdf, corpus_perc_threshold, stop_words_skip_l
 
     return(stop_words_list, non_stop_words_list)
 #...............................................................................................    
-
-
-#...............................................................................................    
-def send_telegram_message(message_text):  
-    data = {}
-    import requests
-    chat_id = "-773311834"
-    tester_bot_token = "5237058133:AAH3KdHe4sh95aHrZJXWyTjNxBbUjQAqi4U"
-    data['telegram_url'] = "https://api.telegram.org/bot"
-    data['url_for_Chat_id'] = f'{tester_bot_token}/getUpdates'   
-    
-    send_message_url = f'{data["telegram_url"]}{tester_bot_token}/sendMessage?chat_id={chat_id}/&text={message_text}'
-    requests.get(send_message_url)
-#...............................................................................................          
+       
 
 
 #...............................................................................................    
